@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	</head>
+	<body>
+		<h1>view_meal</h1>
+		<h2>{{meal.food.name}}</h2>
+		<form role="form" action="" method="POST">
+		    {% csrf_token %}
+			<table class="table table-bordered table-striped">
+				<tbody>
+					<tr>
+						<th>Total Calories</th>
+						<th>{{ meal.get_total_calories}}</th>
+					</tr>
+					<tr>
+						<th>Serving Size</th>
+						<th>{{ meal.serving_size }}</th>
+					</tr>
+					<tr>
+						<th>Total Fat</th>
+						<th>{{ meal.get_total_Fat }}</th>
+					</tr>
+					<tr>
+						<th>Saturated Fat</th>
+						<th>{{ meal.get_total_Saturated_Fat}}</th>
+					</tr>
+					<tr>
+						<th>Total Fat</th>
+						<th>{{ meal.get_total_Fat }}</th>
+					</tr>
+					<tr>
+						<th>Total Fat</th>
+						<th>{{ meal.get_total_Fat }}</th>
+					</tr>
+					<tr>
+						<th>Total Fat</th>
+						<th>{{ meal.get_total_Fat }}</th>
+					</tr>
+				</tbody>
+			</table>
+			<button type="submit" class="btn btn-success">Save</button>
+			<a href="{% url "food:index" %}" class="
+			btn btn-info">Back</a>
+		</form>
+	</body>
+</html>
